@@ -1,6 +1,7 @@
 extern crate rand; //random crate from cargo
 
 use std::io; //import io lib for input
+use std::cmp::Ordering; //be able to compare input with secet num
 use rand::Rng; // import rand lib (from cargo) to gen rand nums
 
 fn main() {
@@ -21,4 +22,10 @@ fn main() {
         .expect("Failed to read line");
 
     println!("You guessed: {}", guess);
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!");
+        Ordering::Greater => println!("Too big!");
+        Ordering::Equal => println!("You win!");
+    }
 }
