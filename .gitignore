@@ -47,5 +47,5 @@ Temporary Items
 .apdisk
 
 # custom
-hello-world/target/
-guessing-game/target/
+projects/hello-world/target/
+projects/guessing-game/target/
