@@ -24,9 +24,12 @@ fn main() {
 
         //convert string to unsigned int 32bit.
         //take away its mutability
-        let guess: u32 = guess.trim().parse()
-                .ok()
-                .expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            //handle errors (when input isn not a number):
+            //parse() results an Enum which can be handled using match
+            Ok(num) => num, //return
+            Err(_) => continue, //next it of loop
+        };
 
         println!("You guessed: {}", guess);
 
