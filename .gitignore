@@ -49,3 +49,4 @@ Temporary Items
 # custom
 projects/hello-world/target/
 projects/guessing-game/target/
+projects/philosophers/target/
